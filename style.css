@@ -10,6 +10,10 @@ body {
     color: white;
     box-sizing: border-box;
 }
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
 
 a {
     color: white;
@@ -130,6 +134,44 @@ section.cards:last-of-type {
     padding: 1rem 1.5rem;
 }
 
+/* FOOTER */
+
 footer {
     background-color: #202123;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6rem 2rem;
+    padding: 3rem 0 6rem 0;
+}
+
+footer section {
+    width: 20rem;
+}
+
+footer h2 {
+    margin: 0 0 1rem 0;
+}
+
+footer .navigation a {
+    display: block;
+    line-height: 1.5;
+}
+footer .navigation a:hover{
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+footer .social-media a {
+    margin-right: 0.8rem;
+}
+
+footer .social-media img {
+    height: 2rem;
+    width: 2rem;
 }
