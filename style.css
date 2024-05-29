@@ -43,9 +43,11 @@ header h1 {
 
 /* MAIN */
 main {
+    max-width: 64rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 /* CARDS CONTAINER */
@@ -56,7 +58,11 @@ main {
 
     align-items: flex-start;
     gap: 6rem 2rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
+}
+
+section.cards:last-of-type {
+    margin-bottom: 6rem;
 }
 
 /* CARD COMPONENT */
@@ -75,12 +81,14 @@ main {
 .card h2 {
     font-size: 2.2rem;
     font-weight: 600;
-    margin: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
+    margin: 0;
 }
 
 .card p {
-    margin: 1rem 0 3rem 0;
+    padding: 1rem 0 3rem 0;
     line-height: 1.5;
+    margin: 0;
    
 }
 
@@ -99,11 +107,27 @@ main {
 }
 
 
+/* HIGHLIGHTED CARD COMPONENT */
 
 
+.highlighted .card {
+    background-color: white;
+    color: #202123;
+    width: 31rem; /* i also considered flex-grow: 1; here, but i thought it looked a bit funky for screen sizes between desktop and mobile */
+   
+}
 
-.cards .highlighted {
-    background-color: red;
+.highlighted .card h2 {
+    margin: 0 1rem;
+}
+
+.highlighted .card p {
+    margin: 0 1rem;
+}
+
+.highlighted .card a {
+    margin: auto 1rem 1rem 1rem;
+    padding: 1rem 1.5rem;
 }
 
 footer {
