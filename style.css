@@ -16,6 +16,7 @@ a {
     text-decoration: none;
 }
 
+/* HEADER */
 header {
     background-color: #3de07e;
     display: flex;
@@ -37,5 +38,74 @@ header h1 {
     color: #202123;
     font-weight: 600;
     font-size: 6rem;
-    margin: auto;
+    text-align: center;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+/* CARDS CONTAINER */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: flex-start;
+    gap: 6rem 2rem;
+    margin-top: 4rem;
+}
+
+/* CARD COMPONENT */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    width: 20rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+}
+
+.card p {
+    margin: 1rem 0 3rem 0;
+    line-height: 1.5;
+   
+}
+
+.card a {
+    background-color: #e83f57;
+    padding: 0.5rem 1rem;
+    margin: auto 0 0 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+}
+
+.card a:hover {
+    background-color: #3de07e;
+    color: #202123;
+}
+
+
+
+
+
+.cards .highlighted {
+    background-color: red;
+}
+
+footer {
+    background-color: #202123;
 }
