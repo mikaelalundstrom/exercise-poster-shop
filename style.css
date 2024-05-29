@@ -114,22 +114,22 @@ section.cards:last-of-type {
 /* HIGHLIGHTED CARD COMPONENT */
 
 
-.highlighted .card {
+.important .card {
     background-color: white;
     color: #202123;
     width: 31rem; /* i also considered flex-grow: 1; here, but i thought it looked a bit funky for screen sizes between desktop and mobile */
    
 }
 
-.highlighted .card h2 {
+.important .card h2 {
     margin: 0 1rem;
 }
 
-.highlighted .card p {
+.important .card p {
     margin: 0 1rem;
 }
 
-.highlighted .card a {
+.important .card a {
     margin: auto 1rem 1rem 1rem;
     padding: 1rem 1.5rem;
 }
