@@ -10,6 +10,7 @@ body {
     color: white;
     box-sizing: border-box;
 }
+
 h2 {
     font-size: 2.2rem;
     font-weight: 600;
@@ -19,6 +20,17 @@ a {
     color: white;
     text-decoration: none;
 }
+
+a.button-link {
+    background-color: #e83f57;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+}
+
+
 
 /* HEADER */
 header {
@@ -48,7 +60,7 @@ header h1 {
 /* MAIN */
 main {
     max-width: 64rem;
-    margin: auto;
+    margin: 6rem auto;
     display: flex;
     flex-direction: column;
     padding: 0 1.5rem;
@@ -59,14 +71,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     align-items: flex-start;
     gap: 6rem 2rem;
-    margin-top: 6rem;
+
 }
 
-section.cards:last-of-type {
-    margin-bottom: 6rem;
+.cards+.cards {
+    margin-top: 6rem;
 }
 
 /* CARD COMPONENT */
@@ -85,29 +96,19 @@ section.cards:last-of-type {
 .card h2 {
     font-size: 2.2rem;
     font-weight: 600;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0;
     margin: 0;
 }
 
 .card p {
-    padding: 1rem 0 3rem 0;
+    padding: 0 0 3rem 0;
     line-height: 1.5;
     margin: 0;
-   
+
 }
 
-.card a {
-    background-color: #e83f57;
-    padding: 0.5rem 1rem;
+.card a.button-link {
     margin: auto 0 0 0;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 0.2rem;
-}
-
-.card a:hover {
-    background-color: #3de07e;
-    color: #202123;
 }
 
 
@@ -117,22 +118,79 @@ section.cards:last-of-type {
 .important .card {
     background-color: white;
     color: #202123;
-    width: 31rem; /* i also considered flex-grow: 1; here, but i thought it looked a bit funky for screen sizes between desktop and mobile */
-   
+    width: 31rem;
+    /* i also considered flex-grow: 1; here, but i thought it looked a bit funky for screen sizes between desktop and mobile */
+
 }
 
 .important .card h2 {
     margin: 0 1rem;
+    padding-top: 2rem;
 }
 
 .important .card p {
     margin: 0 1rem;
 }
 
-.important .card a {
+.important .card a.button-link {
     margin: auto 1rem 1rem 1rem;
     padding: 1rem 1.5rem;
 }
+
+/* CHECKOUT */
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shopping-cart {
+    margin: 0;
+    margin-top: 4rem;
+}
+
+ .shopping-cart p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.shopping-cart p span:nth-of-type(1) {
+    width: 32rem;
+}
+.shopping-cart p span:nth-of-type(2) {
+    width: 20rem;
+}
+.shopping-cart p span:nth-of-type(3) {
+    width: 10rem;
+}
+
+
+
+.shopping-cart p.cart-heading {
+    background-color: #340809;
+    padding: 0.5rem 0;
+}
+
+.shopping-cart p.cart-item, .shopping-cart p.total {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.shopping-cart p.total {
+    border-top: white solid 1px;
+    padding-top: 1.5rem;
+} 
+
+.checkout a.button-link.buy {
+    margin-top: 4rem;
+    align-self: flex-end;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+
 
 /* FOOTER */
 
@@ -143,7 +201,7 @@ footer {
     justify-content: center;
     align-items: flex-start;
     gap: 6rem 2rem;
-    padding: 3rem 0 6rem 0;
+    padding: 3rem 1.5rem 6rem 1.5rem;
 }
 
 footer section {
@@ -158,7 +216,8 @@ footer .navigation a {
     display: block;
     line-height: 1.5;
 }
-footer .navigation a:hover{
+
+footer .navigation a:hover {
     text-decoration: underline;
 }
 
@@ -168,7 +227,9 @@ footer p {
 }
 
 footer .social-media a {
+    display: inline-block;
     margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 footer .social-media img {
