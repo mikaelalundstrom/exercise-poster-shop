@@ -78,7 +78,7 @@ header h1 {
 
 /* MAIN CONTENT */
 
-main > section {
+main > article {
     margin: 6rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(6, 9rem);
@@ -123,7 +123,7 @@ main > section {
 }
 
 /* CHECKOUT */
-main>section>h2 {
+main>article>h2 {
     grid-column: span 6;
     margin: 0;
 }
