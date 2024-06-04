@@ -24,13 +24,9 @@ p {
     margin: 1rem 0;
 }
 
-h1,
-h2 {
-    font-family: "Roboto", sans-serif;
-}
-
 h1 {
     font-size: 6rem;
+    font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -49,6 +45,7 @@ a.button-link {
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 0.2rem;
+    display: inline-block;
 }
 
 /* HEADER */
@@ -104,4 +101,54 @@ main {
 
 .card.big {
     grid-column: span 3;
+    background-color: white;
+    color: var(--primary-dark-grey);
 }
+
+.card.big .card-caption {
+    padding: 1rem;
+}
+.card.big .card-caption a.button-link {
+    padding: 1rem 1.5rem;
+}
+
+/* CHECKOUT */
+
+/* FOOTER */
+
+footer {
+    background-color: var(--primary-dark-grey);
+    display: grid;
+    grid-template-columns: repeat(6, 9rem);
+    gap: 6rem 2rem;
+    justify-content: center;
+    padding: 3rem 1.5rem 6rem 1.5rem;
+}
+
+footer section {
+    grid-column: span 2;
+}
+
+footer section.navigation a {
+    display: block;
+    line-height: 1.5;
+}
+
+footer section.navigation a:hover {
+    text-decoration: underline;
+}
+
+footer section.address address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+footer section.social-media a {
+    display: inline-block;
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+
