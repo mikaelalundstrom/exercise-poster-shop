@@ -20,6 +20,7 @@ body {
 
 h1,
 h2,
+h3,
 p {
     margin: 1rem 0;
 }
@@ -30,6 +31,11 @@ h1 {
 }
 
 h2 {
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+}
+
+h3 {
     font-size: 2.2rem;
 }
 
@@ -72,11 +78,11 @@ header h1 {
 
 /* MAIN CONTENT */
 
-main {
+main > section {
     margin: 6rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(6, 9rem);
-    gap: 6rem 2rem;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -105,6 +111,10 @@ main {
     color: var(--primary-dark-grey);
 }
 
+.cards .card.big {
+    margin-top: 4rem;
+}
+
 .card.big .card-caption {
     padding: 1rem;
 }
@@ -113,6 +123,65 @@ main {
 }
 
 /* CHECKOUT */
+main>section>h2 {
+    grid-column: span 6;
+    margin: 0;
+}
+
+.checkout .shopping-cart {
+    grid-column: span 6;
+    display: grid;
+    grid-template-areas: "heading-vara heading-vara heading-vara heading-antal heading-antal heading-pris"
+                         "first-vara   first-vara   first-vara   first-antal   .             first-pris"
+                         "second-vara  second-vara  second-vara  second-antal  .             second-pris"
+                         "total        total        total        total         total         total-pris";
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: min-content;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.shopping-cart p.heading.vara { grid-area: heading-vara;}
+.shopping-cart p.heading.antal { grid-area: heading-antal;}
+.shopping-cart p.heading.pris { grid-area: heading-pris;}
+
+.shopping-cart p.first.vara { grid-area: first-vara;}
+.shopping-cart p.first.antal { grid-area: first-antal;}
+.shopping-cart p.first.pris { grid-area: first-pris;}
+
+.shopping-cart p.second.vara { grid-area: second-vara;}
+.shopping-cart p.second.antal { grid-area: second-antal;}
+.shopping-cart p.second.pris { grid-area: second-pris;}
+
+.shopping-cart p.total { grid-area: total;}
+.shopping-cart p.total.pris { grid-area: total-pris;}
+
+.shopping-cart p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.shopping-cart p.heading {
+    background-color: #340809;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.shopping-cart p.total {
+    border-top: white solid 1px;
+    padding-top: 1.5rem;
+}
+
+
+.checkout a.button-link.buy {
+    margin-top: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    grid-column: -3 / -1;
+    text-align: center;
+}
+
 
 /* FOOTER */
 
@@ -150,5 +219,3 @@ footer section.social-media a {
     height: 2rem;
     width: 2rem;
 }
-
-
