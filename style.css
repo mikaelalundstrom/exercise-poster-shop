@@ -1,5 +1,7 @@
 /* FONTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 /* GENERAL & TYPOGRAPHY */
 
@@ -54,6 +56,7 @@ a.button-link {
     display: inline-block;
 }
 
+
 /* HEADER */
 header {
     background-color: var(--primary-green);
@@ -78,10 +81,14 @@ header h1 {
 
 /* MAIN CONTENT */
 
+main {
+    max-width: 64rem;
+    margin: auto;
+}
 main > article {
     margin: 6rem 1.5rem;
     display: grid;
-    grid-template-columns: repeat(6, 9rem);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
     justify-content: center;
 }
@@ -103,6 +110,7 @@ main > article {
 
 }
 
+
 /* BIG CARDS */
 
 .card.big {
@@ -122,7 +130,9 @@ main > article {
     padding: 1rem 1.5rem;
 }
 
+
 /* CHECKOUT */
+
 main>article>h2 {
     grid-column: span 6;
     margin: 0;
@@ -178,8 +188,10 @@ main>article>h2 {
     margin-top: 4rem;
     padding: 1rem;
     font-size: 1.5rem;
-    grid-column: -3 / -1;
+    grid-column: span 6;
     text-align: center;
+    justify-self: end;
+    align-self: center;
 }
 
 
@@ -187,35 +199,76 @@ main>article>h2 {
 
 footer {
     background-color: var(--primary-dark-grey);
-    display: grid;
-    grid-template-columns: repeat(6, 9rem);
-    gap: 6rem 2rem;
-    justify-content: center;
     padding: 3rem 1.5rem 6rem 1.5rem;
 }
 
-footer section {
+.contact-and-links {
+    max-width: 64rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-and-links section {
     grid-column: span 2;
 }
 
-footer section.navigation a {
+.contact-and-links section.navigation a {
     display: block;
     line-height: 1.5;
 }
 
-footer section.navigation a:hover {
+.contact-and-links section.navigation a:hover {
     text-decoration: underline;
 }
 
-footer section.address address {
+.contact-and-links section.address address {
     font-style: normal;
     line-height: 1.5;
 }
 
-footer section.social-media a {
+.contact-and-links section.social-media a {
     display: inline-block;
     margin-right: 0.8rem;
     margin-bottom: 0.8rem;
     height: 2rem;
     width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        grid-column: span 3;
+    }
+
+    .card.big {
+        grid-column: span 6;
+    }
+
+    .shopping-cart p {
+        font-size: 1.2rem;
+    }
+
+    .shopping-cart p.heading {
+        font-size: 0.9rem;
+    }
+
+    .contact-and-links section {
+        grid-column: span 3;
+    }
+    .contact-and-links section.social-media {
+        grid-column: span 6;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .card {
+        grid-column: span 6;
+    }
+
 }
