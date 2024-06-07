@@ -98,6 +98,10 @@ main > article {
 
 .card {
     grid-column: span 2;
+    display: grid;
+    grid-template-rows: min-content auto;
+
+   
 }
 
 .card img {
@@ -108,6 +112,16 @@ main > article {
     line-height: 1.5;
     margin-bottom: 3rem;
 
+}
+
+.card-caption {
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+}
+
+.card-caption a.button-link {
+    justify-self: start;   
+    align-self: end;
 }
 
 
